@@ -14,8 +14,22 @@ public class Invoc : MonoBehaviour
 
     public void Spawn()
     {
-        Instantiate(sold, spawnPoint.transform.position, spawnPoint.transform.rotation);
+        int price = 50;
+        int pocket;
+        pocket=FindObjectOfType<MainMenu>().nbCoin;
+        if (price <= pocket)
+        {
+            Instantiate(sold, spawnPoint.transform.position, spawnPoint.transform.rotation);
+            FindObjectOfType<MainMenu>().nbCoin -= price;
+
+        }
+        else
+        {
+            Debug.Log("Not enough Money!!");
+        }
     }
+
+
 
     // Update is called once per frame
     void Update()

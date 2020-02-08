@@ -1,13 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class move : MonoBehaviour
 {
     float speed = 0.02f;
     float turnSpeed = 3.0f;
+    public float Health = 100;
     public bool dead = false;
+
+
+    [Header("Unity stuff")]
+    public Image HealthBar;
+
+
+    public void TakeDmg(float dmg)
+    {
+        Health -= dmg;
+
+        HealthBar.fillAmount = Health / 100f;
+
+        if(Health <= 0)
+        {
+            Destroy(this.gameObject, 1);
+        }
+
+    }
 
     void OnTriggerEnter(Collider col)
     {
@@ -22,6 +41,8 @@ public class move : MonoBehaviour
         }
         else if (col.gameObject.tag == "Enemie")
         {
+            float dmg = 20;
+            TakeDmg(dmg);
             speed = 0f;
         }
         else
@@ -32,7 +53,7 @@ public class move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
