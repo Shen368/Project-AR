@@ -54,6 +54,31 @@ public class move : MonoBehaviour
             speed = 0.02f;
         }
     }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.gameObject.tag == "arrow")
+        {
+
+        }
+        else if (col.gameObject.tag == "userHome")
+        {
+            //Destroy(this.gameObject, 1);
+            //  speed = 0f;
+
+        }
+        else if (col.gameObject.tag == "Player")
+        {
+            //  speed = 0f;
+            CancelInvoke("TakeDmg");
+            //   TakeDmg(dmg);
+        }
+        else
+        {
+            speed = 0.02f;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
