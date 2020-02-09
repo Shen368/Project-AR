@@ -10,14 +10,15 @@ public class move : MonoBehaviour
     float turnSpeed = 3.0f;
     public float Health = 100;
     public bool dead = false;
-
+    float dmg;
 
     [Header("Unity stuff")]
     public Image HealthBar;
 
 
-    public void TakeDmg(float dmg)
+    public void TakeDmg()
     {
+        dmg = 20;
         Health -= dmg;
 
         HealthBar.fillAmount = Health / 100f;
@@ -43,9 +44,9 @@ public class move : MonoBehaviour
         else if (col.gameObject.tag == "Enemie")
         {
             speed = 0f;
-            float dmg = 20;
-            TakeDmg(dmg);
             
+           // TakeDmg(dmg);
+            InvokeRepeating("TakeDmg", 1, 3f);
 
         }
         else

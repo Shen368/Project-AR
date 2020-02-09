@@ -9,12 +9,14 @@ public class EnemiSpawner : MonoBehaviour
     public Transform EnemispawnPoint;
 
     public float Health = 500;
+    float dmg;
 
     [Header("Unity stuff")]
     public Image HealthBar;
 
-    public void TakeDmg(float dmg)
+    public void TakeDmg()
     {
+        dmg = 20;
         Health -= dmg;
 
         HealthBar.fillAmount = Health / 500f;
@@ -36,8 +38,8 @@ public class EnemiSpawner : MonoBehaviour
         }
         else if (col.gameObject.tag == "Player")
         {
-            float dmg = 20;
-            TakeDmg(dmg);
+           // float dmg = 20;
+           // TakeDmg(dmg);
         }
     }
 
