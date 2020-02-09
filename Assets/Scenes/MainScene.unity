@@ -163,7 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: -1550001261, guid: 74f59eb22abf947599d3aecf24b954b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetPattern: colorMarker
+  _targetPattern: tower
   _drawable: {fileID: 558139456253441130, guid: 8c100a68d604bec48929e3184b524066,
     type: 3}
   _autoToggleVisibility: 1

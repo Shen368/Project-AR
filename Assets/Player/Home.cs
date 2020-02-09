@@ -40,18 +40,4 @@ public class Home : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider col)
-    {
-        if (col.gameObject.tag == "arrow")
-        {
-
-        }
-        else if (col.gameObject.tag == "Player")
-        {
-            // float dmg = 20;
-            // TakeDmg(dmg);
-            //InvokeRepeating("TakeDmg", 1, 3f);
-            CancelInvoke("TakeDmg");
-        }
-    }
 }

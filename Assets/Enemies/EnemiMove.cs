@@ -25,6 +25,7 @@ public class EnemiMove : MonoBehaviour
         {
             Destroy(this.gameObject, 1);
             FindObjectOfType<MainMenu>().nbCoin += 10;
+            CancelInvoke("TakeDmg");
         }
         
     }
@@ -46,30 +47,6 @@ public class EnemiMove : MonoBehaviour
             speed = 0f;
             InvokeRepeating("TakeDmg", 1, 3f);
          //   TakeDmg(dmg);
-        }
-        else
-        {
-            speed = 0.02f;
-        }
-    }
-
-    void OnTriggerExit(Collider col)
-    {
-        if (col.gameObject.tag == "arrow")
-        {
-
-        }
-        else if (col.gameObject.tag == "userHome")
-        {
-            //Destroy(this.gameObject, 1);
-          //  speed = 0f;
-
-        }
-        else if (col.gameObject.tag == "Player")
-        {
-          //  speed = 0f;
-            CancelInvoke("TakeDmg");
-            //   TakeDmg(dmg);
         }
         else
         {
