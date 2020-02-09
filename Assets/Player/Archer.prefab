@@ -1088,7 +1088,7 @@ GameObject:
   - component: {fileID: 2585043786862362689}
   m_Layer: 0
   m_Name: Archer
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1121,7 +1121,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: fe147e7ec9200d74b8382f509f6372a8, type: 3}
   m_Controller: {fileID: 0}
-  m_CullingMode: 1
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
@@ -2275,6 +2275,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016403873549799489, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8ddf6cae2ed5c9942b7df8653ad4f192,
+        type: 3}
+    - target: {fileID: 3016403873549799489, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016403873549799489, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016403873549799489, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3016403873549799489, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
+        type: 3}
+      propertyPath: m_FillOrigin
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6175680044721828058, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
         type: 3}

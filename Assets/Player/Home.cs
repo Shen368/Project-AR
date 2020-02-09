@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Home : MonoBehaviour
 {
-    public float Health = 1500;
+    public float Health = 500;
 
     [Header("Unity stuff")]
     public Image HealthBar;
@@ -15,7 +15,7 @@ public class Home : MonoBehaviour
     {
         Health -= dmg;
 
-        HealthBar.fillAmount = Health / 1500f;
+        HealthBar.fillAmount = Health / 500f;
 
         if (Health <= 0)
         {
@@ -27,7 +27,7 @@ public class Home : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "bullet")
+        if (col.gameObject.tag == "arrow")
         {
 
         }

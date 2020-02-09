@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ArcherMove : MonoBehaviour
 {
+    Animator anim;
     float speed = 0.02f;
     float turnSpeed = 3.0f;
     public float Health = 80;
@@ -19,7 +20,7 @@ public class ArcherMove : MonoBehaviour
     {
         Health -= dmg;
 
-        HealthBar.fillAmount = Health / 100f;
+        HealthBar.fillAmount = Health / 80f;
 
         if (Health <= 0)
         {
@@ -30,7 +31,7 @@ public class ArcherMove : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "bullet")
+        if (col.gameObject.tag == "arrow")
         {
 
         }
@@ -53,7 +54,7 @@ public class ArcherMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+       // anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame

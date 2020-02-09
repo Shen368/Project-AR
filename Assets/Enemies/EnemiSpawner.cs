@@ -8,7 +8,7 @@ public class EnemiSpawner : MonoBehaviour
     public GameObject EnemiSold;
     public Transform EnemispawnPoint;
 
-    public float Health = 1500;
+    public float Health = 500;
 
     [Header("Unity stuff")]
     public Image HealthBar;
@@ -17,7 +17,7 @@ public class EnemiSpawner : MonoBehaviour
     {
         Health -= dmg;
 
-        HealthBar.fillAmount = Health / 1500f;
+        HealthBar.fillAmount = Health / 500f;
 
         if (Health <= 0)
         {
@@ -30,7 +30,7 @@ public class EnemiSpawner : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "bullet")
+        if (col.gameObject.tag == "arrow")
         {
 
         }
@@ -44,9 +44,9 @@ public class EnemiSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //InvokeRepeating("Spawn", 5, 1f);
+        InvokeRepeating("Spawn", 5, 10f);
         //Spawn();
-        Invoke("Spawn", 5);
+        //Invoke("Spawn", 5);
     }
 
     void Spawn()

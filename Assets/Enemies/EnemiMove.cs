@@ -18,18 +18,18 @@ public class EnemiMove : MonoBehaviour
         Health -= dmg;
 
         HealthBar.fillAmount = Health / 100f;
-
+        
         if (Health <= 0)
         {
             Destroy(this.gameObject, 1);
             FindObjectOfType<MainMenu>().nbCoin += 10;
         }
-
+        
     }
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "bullet")
+        if (col.gameObject.tag == "arrow")
         {
 
         }

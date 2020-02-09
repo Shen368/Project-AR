@@ -2970,6 +2970,11 @@ PrefabInstance:
       propertyPath: m_FillOrigin
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3016403873549799489, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
+        type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7236344848440499550, guid: ec7d30dad9aa9be4b9a59d4d91b5ea0d,
         type: 3}
       propertyPath: m_LocalPosition.x
